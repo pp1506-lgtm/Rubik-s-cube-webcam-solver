@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Rubik's Cube Webcam Scanner</title>
+    <script src="/static/js/main.js" defer></script>
+    <style>
+        body { font-family: Arial, sans-serif; padding: 20px; }
+        video, img { width: 200px; border: 2px solid #ccc; }
+        .faces { display: flex; flex-wrap: wrap; gap: 20px; margin-top: 20px; }
+        .face { text-align: center; }
+        button { margin-top: 5px; padding: 5px 10px; }
+    </style>
+</head>
+<body>
+    <h1>Rubik's Cube Webcam Scanner</h1>
+
+    <h2>Live Camera</h2>
+    <img id="camera" src="/video_feed">
+
+    <h2>Capture Faces</h2>
+    <div class="faces">
+        <div class="face">
+            <h3>U</h3>
+            <button onclick="captureFace('U')">Capture</button>
+            <div><img id="U-preview" src="" alt="Not captured"></div>
+        </div>
+        <div class="face">
+            <h3>R</h3>
+            <button onclick="captureFace('R')">Capture</button>
+            <div><img id="R-preview" src="" alt="Not captured"></div>
+        </div>
+        <div class="face">
+            <h3>F</h3>
+            <button onclick="captureFace('F')">Capture</button>
+            <div><img id="F-preview" src="" alt="Not captured"></div>
+        </div>
+        <div class="face">
+            <h3>D</h3>
+            <button onclick="captureFace('D')">Capture</button>
+            <div><img id="D-preview" src="" alt="Not captured"></div>
+        </div>
+        <div class="face">
+            <h3>L</h3>
+            <button onclick="captureFace('L')">Capture</button>
+            <div><img id="L-preview" src="" alt="Not captured"></div>
+        </div>
+        <div class="face">
+            <h3>B</h3>
+            <button onclick="captureFace('B')">Capture</button>
+            <div><img id="B-preview" src="" alt="Not captured"></div>
+        </div>
+    </div>
+
+    <h2>Solver</h2>
+    <button onclick="solveCube()">Solve Cube</button>
+    <pre id="solution"></pre>
+</body>
+</html>
